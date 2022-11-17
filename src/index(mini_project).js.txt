@@ -1,0 +1,28 @@
+////////////////////// react mini project \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+import { findByLabelText } from "@testing-library/react";
+import React from "react";
+import ReactDOM from 'react-dom';
+
+let vari;
+const x = new Date().getHours();
+if(x > 12 && x < 15) vari = "good afternoon";
+else if(x > 15) vari = "good evening";
+else vari = "good morning";
+
+const heading = {
+    color: 'black',
+    textTransform : 'capitalize',
+    display : 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border : '2px solid black',
+    backgroundColor : 'green',
+    marginTop : '15rem'
+}
+ReactDOM.render(
+    <>
+    <h1 style = {heading}>hello sir {vari}</h1>
+    </>,
+    document.getElementById("root")
+);
